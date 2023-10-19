@@ -40,7 +40,7 @@
             <td class="td">{{ product.quantity }}</td>
             <td class="td"><button  :class="{ 'statusbtn'  : product.available, 'notavail': !product.available }"  @click="toglestatus(product)">{{ product.available ? 'available'
               : 'not_available' }}</button></td>
-            <td class="td">
+            <td class="td tdbtn">
               <button class="upbtn" @click="updateProduct(product)">Update</button>
               <button class="delbtn" @click="handledelete(product)">Delete</button>
             </td>
@@ -93,7 +93,7 @@ export default {
             product.name.toLowerCase().includes(query) ||
             product.description.toLowerCase().includes(query) ||
             product.price.toString().toLowerCase().includes(query) ||
-            product.number.toString().toLowerCase().includes(query)
+            product.quantity.toString().toLowerCase().includes(query)
           );
         });
       }
@@ -314,7 +314,10 @@ body {
   border-radius: 10px;
   margin-right: 20px;
 }
-
+.tdbtn{
+  display: flex;
+  justify-content: space-evenly;
+}
 .deldive {
   top: 0;
   right: 0;
