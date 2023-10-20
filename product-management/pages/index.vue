@@ -41,7 +41,7 @@
             <td class="td"><button  :class="{ 'statusbtn'  : product.available, 'notavail': !product.available }"  @click="toglestatus(product)">{{ product.available ? 'available'
               : 'not_available' }}</button></td>
             <td class="td tdbtn">
-              <button class="upbtn" @click="updateProduct(product)">Update</button>
+              <button class="upbtn" @click="updateProduct(product)">Edit</button>
               <button class="delbtn" @click="handledelete(product)">Delete</button>
             </td>
           </tr>

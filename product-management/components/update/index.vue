@@ -89,6 +89,7 @@ export default {
         .then(response => {
           if (response.ok) {
             // Request successful
+            this.$router.go()
             console.log('Product updated successfully');
           } else {
             // Request failed
